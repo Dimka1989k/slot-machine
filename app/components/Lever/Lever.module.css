@@ -1,0 +1,89 @@
+.lever {
+  position: absolute;
+  top: 110px;
+  right: 42px;
+}
+
+@media screen and (max-width: 640px) {
+  .lever {
+    top: 66px;
+    right: 37px;
+  }
+}
+
+.shoulder {
+  position: relative;
+}
+
+.arm:before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 24px;
+  width: 16px;
+  height: 70px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 0px #333;
+  border: 1px solid #341d1a;
+  background-color: #9cdefa;
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  transform: rotate(5deg);
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+@media screen and (max-width: 640px) {
+  .arm:before {
+    width: 14px;
+  }
+}
+
+.arm:after {
+  background-image: url("../../images/circle-handle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.arm.clicked:before {
+  top: -20px;
+  left: 20px;
+  -webkit-transform: rotate3d(-80, 10, 0, 180deg);
+  -moz-transform: rotate3d(-80, 10, 0, 180deg);
+  transform: rotate3d(-80, 10, 0, 180deg);
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+.arm.clicked:after {
+  top: 90px;
+  left: 23px;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
